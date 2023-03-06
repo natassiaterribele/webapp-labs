@@ -87,7 +87,7 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
     - name: Deploy da nossa aplicação Hello Java
-      uses: Azure/aci-deploy@v1
+      uses: azure/aci-deploy@v1
       with:
         resource-group: RG-APPS-CRESCER
         dns-name-label: lab-crescer-natassia-terribele
