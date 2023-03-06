@@ -98,4 +98,4 @@ deploy:
       registry-username: ${{ secrets.REGISTRY_USERNAME }}
       registry-password: ${{ secrets.REGISTRY_PASSWORD }}
       name: lab-crescer-natassia-terribele
-      location: 'esat us'
+      location: 'east us'
