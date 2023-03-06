@@ -26,15 +26,15 @@ code-quality:
   needs: build
   runs-on: ubuntu-latest
 
-  steps:
-  - name: Git Checkout
-    uses: actions/checkout@v3
-  - name: Adicionando Permissão para o mvnw
-    run: chmod +x mvnw
-  - name: Análise SonarCloud
-    run: ./mvnw verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=lab-crescer-pipeline
-    env:
-      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+steps:
+- name: Git Checkout
+  uses: actions/checkout@v3
+- name: Adicionando Permissão para o mvnw
+  run: chmod +x mvnw
+- name: Análise SonarCloud
+  run: ./mvnw verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=lab-crescer-pipeline
+  env:
+    SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
 tests:
   name: Testes Automatizados
